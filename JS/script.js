@@ -27,7 +27,7 @@ navigationMenuLinks.forEach((link) => {
 
 // <======== Adding TypeWriter Effect in Home-Container ========>
 const homeContainerTitle = document.querySelector('#home-container .home-container-title h1');
-const homeTitles = ["hello", "hola", "hi", "namaste", "bonjour", "ciao", "marhaba", "aloha", "shalom"];
+const homeTitles = ["hello", "hola", "hi", "namaste", "bonjour", "marhaba", "aloha", "shalom"];
 let titleIndex = 0;
 if (homeContainerTitle) {
     updateHomeTitleText();
@@ -36,7 +36,7 @@ if (homeContainerTitle) {
 function updateHomeTitleText() {
     homeContainerTitle.innerText = `${homeTitles[titleIndex]}`
     titleIndex++;
-    if (titleIndex == 4 || titleIndex == 5 || titleIndex == 7 || titleIndex == 9) {
+    if (titleIndex == 4 || titleIndex == 5 || titleIndex == 6 || titleIndex == 8) {
         homeContainerTitle.style.fontSize = '20vw';
         homeContainerTitle.style.padding = '60px 0px';
     }
@@ -48,7 +48,7 @@ function updateHomeTitleText() {
     if (titleIndex == homeTitles.length) {
         titleIndex = 0;
     }
-    setTimeout(updateHomeTitleText, 1200);
+    setTimeout(updateHomeTitleText, 1000);
 }
 
 
